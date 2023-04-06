@@ -1,6 +1,11 @@
 import './index.css';
 import Skill from './components/Skill';
-import { useState } from 'react';
+import html from './assets/html.jpg';
+import css from './assets/css.jpg';
+import react from './assets/react.jpg';
+import nodejs from './assets/nodejs.jpg';
+import javascript from './assets/javascript.jpg';
+import github from './assets/github.jpg';
 
 function App() {
   const showSkills = true;
@@ -8,16 +13,13 @@ function App() {
     <div className="App">
       {showSkills ? (
         <>
-          <div className="flex flex-wrap">
-            <Skill
-              name="HTML"
-              level="Mastered"
-              img="https://images.unsplash.com/photo-1632882765546-1ee75f53becb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aHRtbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-            />
-            <Skill name="CSS" level="Mastered" />
-            <Skill name="JS" level="Learning in progress" />
-            <Skill name="NODE JS" level="Learning in progress" />
-            <Skill name="REACT" level="Learning in progress" />
+          <div className="flex flex-wrap justify-center">
+            <Skill name="HTML" level="Mastered" img={html} />
+            <Skill name="CSS" level="Mastered" img={css} />
+            <Skill name="GITHUB" level="Mastered" img={github} />
+            <Skill name="JS" level="Learning in progress" img={javascript} />
+            <Skill name="NODE JS" level="Learning in progress" img={nodejs} />
+            <Skill name="REACT" level="Learning in progress" img={react} />
           </div>
         </>
       ) : (
